@@ -11,7 +11,7 @@ const envSchema = z.object({
     JWT_REFRESH_SECRET: z.string().min(32, 'REFRESH_SECRET must be at least 32 chars'),
     ACCESS_TOKEN_TTL: z.string().default('15m'),
     REFRESH_TOKEN_TTL_DAYS: z.coerce.number().default(7),
-    CLIENT_URL: z.string().url().default('http://localhost:5173'),
+    CLIENT_URL: z.url().default('http://localhost:5173'),
 });
 
 const parsed = envSchema.safeParse(process.env);
