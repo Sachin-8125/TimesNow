@@ -28,7 +28,7 @@ export const env = {
     jwtAccessSecret: parsed.data.JWT_ACCESS_SECRET,
     jwtRefreshSecret: parsed.data.JWT_REFRESH_SECRET,
     accessTokenTtl: parsed.data.ACCESS_TOKEN_TTL,
-    refreshTokenTtl: parsed.data.REFRESH_TOKEN_TTL_DAYS,
+    refreshTokenTtlDays: parsed.data.REFRESH_TOKEN_TTL_DAYS,
     clientUrl: parsed.data.CLIENT_URL,
 };
 
