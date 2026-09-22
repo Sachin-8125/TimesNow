@@ -2,8 +2,9 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { PublicOnlyRoute } from './components/PublicOnlyRoute';
-import { SignIn } from './pages/SignIn.jsx';
-import { Dashboard } from './pages/Dashboard.jsx';
+import SignIn from './pages/SignIn.jsx';
+import Dashboard from './pages/Dashboard.jsx';
+import Signup from './pages/Signup.jsx';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route element={<PublicOnlyRoute />}>
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<Signup />} />
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />

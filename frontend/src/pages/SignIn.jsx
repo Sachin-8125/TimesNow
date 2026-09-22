@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-export function SignIn() {
+export default function SignIn() {
     const { login } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
