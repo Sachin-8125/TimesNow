@@ -1,6 +1,6 @@
 import { env, isProduction } from '../config/env.js';
 
-export const REFRESH_COOKIE_NAME = 'refreshToken';
+export const REFRESH_COOKIE_NAME = 'tn_refresh_token';
 
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
 
@@ -15,4 +15,4 @@ export const refreshCookieOptions = {
 export const clearCookieOptions = {
     ...refreshCookieOptions,
     maxAge: 0,
-};
+};
